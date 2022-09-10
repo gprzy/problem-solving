@@ -1,14 +1,10 @@
-# 1. Multiples of 3 or 5
-# If we list all the natural numbers below 10 that are multiples of 3 or 5, 
-# we get 3, 5, 6 and 9. The sum of these multiples is 23.
-# Find the sum of all the multiples of 3 or 5 below 1000.
-
-def sum_all_multiples_of_3_or_5(n: int) -> int:
+def sum_all_multiples_of(n: int, a, b) -> int:
     sum_value = 0
     for i in range(1, n):
-        if i%3 == 0 or i%5 == 0:
+        if i%a == 0 or i%b == 0:
             sum_value += i
     return sum_value
 
 if __name__ == '__main__':
-    print(sum_all_multiples_of_3_or_5(1000))
+    print('sum of all multiples of 3 or 5 from 1 to 999')
+    print(sum_all_multiples_of(n=1000, a=3, b=5))
